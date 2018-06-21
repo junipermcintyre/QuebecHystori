@@ -1,0 +1,109 @@
+.hystori-calendar {
+	box-shadow: 0 1px 5px -2px #777;
+	background: $primary;
+}
+
+// Hystori calendar
+.calendar-month {
+	padding: 70px 25px;
+	width: 100%;
+	background: $tertiary;
+	text-align: center;
+
+	&__list {
+		.prev, .next {
+			display: flex;
+			height: 30px;
+			width: 30px;
+			align-items: center;
+			justify-content: center;
+			border-radius: 25px;
+
+			&:hover, &:focus {
+				cursor: pointer;
+				transition: 0.25s all ease-in;
+				color: $white;
+				background: $black;
+			}
+		}
+
+		.prev {
+			float: left;
+		}
+
+		.next {
+			float: right;
+		}
+	}
+}
+
+.calendar-weekdays {
+	padding: 10px;
+	font-size: 0;
+	li {
+		font-size: 1rem;
+		display: inline-block;
+		width: 14.285%;
+		text-align: center;
+	}
+}
+
+.calendar-dates {
+	font-size: 0;
+	padding: 10px;
+	&__box {
+		display: inline-block;
+		width: 14.285%;
+	}
+}
+
+.calendar-box {
+	position: relative;
+	opacity: 0.5;
+	padding-bottom: 13.6%;
+	text-align: center;
+	background: $secondary;
+	box-shadow: 
+	    2px 0 0 0 #888, 
+	    0 2px 0 0 #888, 
+	    2px 2px 0 0 #888,   /* Just to fix the corner */
+	    2px 0 0 0 #888 inset, 
+	    0 2px 0 0 #888 inset;
+	font-size: 1rem;
+
+	&--inMonth {
+		opacity: 0.8;
+	}
+
+	&:hover, &:focus {
+		transition: 0.25s all ease-out;
+		background: #000;
+		color: #fff;
+		opacity: 1;
+	}
+
+	&__day {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+	}
+
+	&__events {
+		font-size: 10px;
+		text-align: left;
+		text-decoration: underline;
+		position: absolute;
+		left: 5px;
+		top: 22px;
+	}
+}
+
+.calendar-events {
+	&__item {
+		&:hover, &:focus {
+			background: $white;
+			color: $black;
+			cursor: pointer;
+		}
+	}
+}

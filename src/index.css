@@ -1,0 +1,236 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif; }
+
+#root {
+  width: 100%; }
+
+.hystori {
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+  padding-left: 125px; }
+  @media only screen and (max-width: 768px) {
+    .hystori {
+      padding-left: 0;
+      padding-top: 96px; } }
+  .hystori__sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 125px;
+    height: 100vh; }
+    @media only screen and (max-width: 768px) {
+      .hystori__sidebar {
+        width: 100%;
+        right: 0;
+        height: auto; } }
+  .hystori__body {
+    position: relative;
+    width: 100%; }
+
+.hystori-body {
+  padding: 20px;
+  background: #def3f1; }
+
+.hystori-sidebar__title {
+  font-weight: 900;
+  text-align: center;
+  border-bottom: 2px solid #ba2d65;
+  padding: 10px 0;
+  background: #fff;
+  color: #000; }
+
+.hystori-year-list {
+  background: #f06292;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100vh - 39px); }
+  @media only screen and (max-width: 768px) {
+    .hystori-year-list {
+      overflow-y: hidden;
+      overflow-x: auto;
+      white-space: nowrap;
+      height: auto; } }
+  .hystori-year-list .hystori-year-list__item {
+    text-align: center;
+    background: #f06292;
+    transition: 0.15s ease-in;
+    padding: 5px 0;
+    width: 100%; }
+    @media only screen and (max-width: 768px) {
+      .hystori-year-list .hystori-year-list__item {
+        display: inline-block;
+        width: 100px;
+        padding: 20px 0; } }
+    .hystori-year-list .hystori-year-list__item.active {
+      text-decoration: underline;
+      background: #ba2d65;
+      color: #fff; }
+    .hystori-year-list .hystori-year-list__item:hover, .hystori-year-list .hystori-year-list__item:focus {
+      background: #ff94c2;
+      cursor: pointer; }
+
+.hystori-calendar {
+  box-shadow: 0 1px 5px -2px #777;
+  background: #009688; }
+
+.calendar-month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #00675b;
+  text-align: center; }
+  .calendar-month__list .prev, .calendar-month__list .next {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px; }
+    .calendar-month__list .prev:hover, .calendar-month__list .prev:focus, .calendar-month__list .next:hover, .calendar-month__list .next:focus {
+      cursor: pointer;
+      transition: 0.25s all ease-in;
+      color: #fff;
+      background: #000; }
+  .calendar-month__list .prev {
+    float: left; }
+  .calendar-month__list .next {
+    float: right; }
+
+.calendar-weekdays {
+  padding: 10px;
+  font-size: 0; }
+  .calendar-weekdays li {
+    font-size: 1rem;
+    display: inline-block;
+    width: 14.285%;
+    text-align: center; }
+
+.calendar-dates {
+  font-size: 0;
+  padding: 10px; }
+  .calendar-dates__box {
+    display: inline-block;
+    width: 14.285%; }
+
+.calendar-box {
+  position: relative;
+  opacity: 0.5;
+  padding-bottom: 13.6%;
+  text-align: center;
+  background: #52c7b8;
+  box-shadow: 2px 0 0 0 #888, 0 2px 0 0 #888, 2px 2px 0 0 #888, 2px 0 0 0 #888 inset, 0 2px 0 0 #888 inset;
+  font-size: 1rem; }
+  .calendar-box--inMonth {
+    opacity: 0.8; }
+  .calendar-box:hover, .calendar-box:focus {
+    transition: 0.25s all ease-out;
+    background: #000;
+    color: #fff;
+    opacity: 1; }
+  .calendar-box__day {
+    position: absolute;
+    top: 5px;
+    left: 5px; }
+  .calendar-box__events {
+    font-size: 10px;
+    text-align: left;
+    text-decoration: underline;
+    position: absolute;
+    left: 5px;
+    top: 22px; }
+
+.calendar-events__item:hover, .calendar-events__item:focus {
+  background: #fff;
+  color: #000;
+  cursor: pointer; }
+
+.hystori-codex {
+  position: fixed;
+  height: 350px;
+  bottom: -352px;
+  left: 0;
+  right: 0;
+  background: #ff94c2;
+  color: #ba2d65;
+  border-top: 2px solid #ba2d65;
+  padding: 15px; }
+  .hystori-codex--active {
+    transition: 0.3s all ease-in-out;
+    bottom: 0; }
+  .hystori-codex__close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px; }
+    .hystori-codex__close:hover, .hystori-codex__close:focus {
+      transition: 0.25s all ease-in;
+      color: #fff;
+      background: #000;
+      cursor: pointer; }
+  .hystori-codex__title {
+    font-size: 1.5em;
+    margin: 0 0 15px 0;
+    text-decoration: underline; }
+  .hystori-codex__key {
+    font-style: italic;
+    font-size: 0.8em; }
+
+.codex-description {
+  margin: 15px 0 0 0; }
+  .codex-description p {
+    margin: 4px 0; }
+  .codex-description__link {
+    text-decoration: underline;
+    border-radius: 10px; }
+    .codex-description__link:hover, .codex-description__link:focus {
+      transition: 0.25s ease-out all;
+      color: #fff;
+      background: #000;
+      cursor: pointer;
+      padding: 0 3px; }
+
+/*# sourceMappingURL=index.css.map */

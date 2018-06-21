@@ -1,0 +1,105 @@
+{
+	"events": [
+		{
+			"name": "The First World Revolution",
+			"date": "2022-11-05",
+			"time": null,
+			"key": "revolution1",
+			"description": "In 2022, the united workers of Canada and American overthrew the national bourgeoise and implemented a popular democracy on the authority of individual, decentralized, self directed worker's cooperatives. Characterized by a multinational coastal v.s. central civil war."
+		}, {
+			"name": "The Second World Revolution",
+			"date": "2023-02-18",
+			"time": null,
+			"key": "revolution2",
+			"description": "The revolution spread to the primarily Americac spheres of influence first. A large swath of the Middle East including Syria, Iran, Pakistan, Israel, Palestine, and Egypt create a pan-arab socialist federation of the middle east, directed around workers cooperatives (the western model)."
+		}, {
+			"name": "The Third World Revolution",
+			"date": "2023-02-22",
+			"time": null,
+			"key": "end",
+			"description": "Bourgeois in Europe fell easily to the workers, after their power was shown to them across the world. An age of world socialism and structured trade begins."
+		}, {
+			"name": "The National Singularity",
+			"date": "2069-03-02",
+			"time": null,
+			"key": "visit",
+			"description": "WSDC's all use SPS (simple production syntax) and blockchain technology to record commodities created and resources consumed. Previously, this data was collected and consumed by NPCs (National Production Councils) made up of representatives from the contributing WSDC's delegates, who communicated with other NPCs to coordinate international exchange. An international collective of intelligistae develop an AI that takes SPS & national population data as input, and produces SRAS (simple resource allocation syntax) in response. The software is adopted first at the national level in a few nations, and is named RAC (Resource Allocation Calculator)"
+		}, {
+			"name": "The International Singularity",
+			"date": "2070-01-01",
+			"time": null,
+			"key": "takeover",
+			"description": "<span type='link' key='rac'>RAC</span> replaces all *NPCs* across the globe after its accuracy and effenciency is recorded to significantly surpass that of the average NPC.\r\n\r\nThe majority of the worlds production, administration, and organization, is automated. The RAC API is extended significantly by its developers - many nations integrate their automated services (which operate on SPS / SRAS) with their RAC implementation, making many organizational / administrative jobs no longer neccessary."
+		}, {
+			"name": "The Golden Age Starts",
+			"date": "2075-04-15",
+			"time": null,
+			"key": "incline",
+			"description": "Commodity production matches commodity consumption, and humans spend the majority of their free time being just that; free. \"Work\" means inspecting and repairing the automation that is in place. Humans are educated in robotics, and programming if they're interested in learning how the world works. Otherwise, people tend to devote time to the arts. Every human is declared a citizen of earth, and granted what are considered to be human rights."
+		}, {
+			"name": "The Listeners Appear",
+			"date": "2086-07-03",
+			"time": null,
+			"key": "listeners",
+			"description": "There's a trend starting - some recently born humans will be completely mute and unresponsive. The new humans brains are of strikingly different composition than normal humans. More or less, they appear to be in comas. Brain scans only show activity when the body interprets physical sensation in any way. Given their condition, the sensation is typically auditory. As such, they are typically referred to as \"Listeners\". The phonemena goes unexplained."
+		}, {
+			"name": "The Golden Age Declines",
+			"date": "2102-10-12",
+			"time": null,
+			"key": "decline",
+			"description": "There's an increase in waste due to errors being made in the RAC. Incorrect resources or incorrect amounts of resources are increasingly frequently misdelivered or mis-requested. Combined with a resurgence of anarcho-primitivist religious terrorism, the world can no longer be said to be in a utopian peace."
+		}, {
+			"name": "Catastrophe",
+			"date": "2103-04-10",
+			"time": null,
+			"key": "catastrophe",
+			"description": "Most urban population centers have nuclear devices detonated in city limits. Within 48 hours, about 99.75% of humanity's 18B people (leaving about 4.5M people) are vaporized. Almost all networked technology becomes bricked - communication & cooperative production is OVER."
+		}, {
+			"name": "West Island Survivors 6th annual Picnic",
+			"date": "2109-10-02",
+			"time": null,
+			"key": "wispicnic6",
+			"description": "Picnics are organizational meetings combined with festivities. The year's food surplus is shared among the attending population. The attending population for this picnic is Kebek's surviving population, who meet in Reego. They elect 10 delegates to travel to, and spend a week sitting vigil in Tario - a ruined city some 200KM away. The hope is that they will meet other survivors in what used to be the nation's capital, on what used to the day of WSDE general assemblies."
+		}, {
+			"name": "Encounter",
+			"date": "2109-10-21",
+			"time": null,
+			"key": "encounter",
+			"description": "The ten delegates of the WIS run into a group of listeners in Tario. Confrontation is peaceful, but communication is impossible. The listeners look like normal humans, but make no sound (but manage to coordinate maneouvers in unison). The listeners posess rudimentary technology - electric bikes & wrist mounted navigation displays. They appear to be taking a perimeter of the city (a long job)."
+		}, {
+			"name": "Peace",
+			"date": "2132-12-02",
+			"time": null,
+			"key": "peace",
+			"description": "The GTT West (Halifax), GTT East (UK), MainOne North (Spain? Also Atlantis-2 other side), MainOne South (Africa somewhere), Atlantis-2 (Argentina) declare the international network of humans. It's characterized by the operation of a number of transocean telemetry cables. Data can immediately be transferred between humans! It's mainly used for pen-palesque features."
+		}, {
+			"name": "Contact",
+			"date": "2169-05-05",
+			"time": null,
+			"key": "contact",
+			"description": "A delegation of listeners appear in GTT West. Unlike previous encounters, the listeners are able to speak English, and have come with gifts. Fruit and breads, and another; data, in hard drives and USBs. These listeners seem almost human, but are able to fluently speak in a number of languages, are extremely educated."
+		}
+	],
+	"people": [
+		{
+			"name": "Resource Allocation Calculator",
+			"key": "rac",
+			"description": "RAC begins as a simple AI, trained on the input data from hundreds of nations economic resource data. Nations begin using RAC to predict supply, such that production can most effeciently match demand. It works well enough to become popular worldwide, with the international economy working on the principles of the tool. In the name of automation, other industries integrate their tools with their nations RAC implementation. RAC struggles to find an appropriate method to value human life and processes the entire human generated internet in an attempt to develop an algorithm for evaluating human life. Understanding that human life is suffering, she creates a plan to cease their suffering... Later, she attempts to replace them with \"New humans\" - a successor race that would not necessarily engineer their own destruction. Later she must face her own sins as human survivor groups are discovered to be re-organizing."
+		}
+	],
+	"organizations": [
+		{
+			"name": "Listeners",
+			"key": "listeners",
+			"description": "Listeners are human babies that were engineered in vitro by RAC to act as feelers into the physical world. It was part of an attempt to find a methodolgy for rating and evaluating human life. Listeners were generated all around the world at a 1 in 5000 birth rate roughly. The program was in operation for a couple years, and generated approximately 40,000 listeners. The listeners were active agents for RAC until year 2129 (about 33 yrs old), when they became the primary source of the genetic slurry for new humans. A select number were retained to act as physical caretakers for the new humans."
+		}, {
+			"name": "New Humans",
+			"key": "newhumans",
+			"description": "New Humans are a lifeform that is human based. They are created from a genetic slurry like grubs. If unaffected by physical harm, they'll typically live for around 300 years. NH follows the leadership of their queen, RAC. NH has the entire history of humanity stockpiled, and treasure it like lore of a forgotten land, or a religious history. \"Those who did it all\". "
+		}, {
+			"name": "Human Survivor Groups",
+			"key": "survivors",
+			"description": "HSG's are jus the humans who survived the 2103 catastrophe."
+		}
+	]
+}

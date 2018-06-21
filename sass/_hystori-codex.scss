@@ -1,0 +1,74 @@
+// Hystori-codex
+.hystori-codex {
+	position: fixed;
+	height: 350px;
+	bottom: -352px;
+	left: 0;
+	right: 0;
+	background: $secondaryPink;
+	color: $tertiaryPink;
+	border-top: 2px solid $tertiaryPink;
+	padding: 15px;
+
+
+	&--active {
+		transition: 0.3s all ease-in-out;
+		bottom: 0;
+	}
+
+	&__close {
+		position: absolute;
+		top: 8px;
+		right: 10px;
+		cursor: pointer;
+		border-radius: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 20px;
+		width: 20px;
+
+		&:hover, &:focus {
+			transition: 0.25s all ease-in;
+			color: $white;
+			background: $black;
+			cursor: pointer;
+		}
+	}
+
+	&__title {
+		font-size: 1.5em;
+		margin: 0 0 15px 0;
+		text-decoration: underline;
+	}
+
+	&__key {
+		font-style: italic;
+		font-size: 0.8em;
+	}
+
+	&__description {
+		
+	}
+}
+
+.codex-description {
+	margin: 15px 0 0 0;
+
+	p {
+		margin: 4px 0;
+	}
+
+	&__link {
+		text-decoration: underline;
+		border-radius: 10px;
+
+		&:hover, &:focus {
+			transition: 0.25s ease-out all;
+			color: $white;
+			background: $black;
+			cursor: pointer;
+			padding: 0 3px;
+		}
+	}
+}

@@ -1,0 +1,50 @@
+// Hystori Year list
+
+.hystori-sidebar__title {
+	font-weight: 900;
+	text-align: center;
+	border-bottom: 2px solid $tertiaryPink;
+	padding: 10px 0;
+	background: $white;
+	color: $black;
+}
+
+.hystori-year-list {
+	background: $primaryPink;
+	width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: calc(100vh - 39px);
+
+	@media only screen and (max-width: 768px) {
+		overflow-y: hidden;
+		overflow-x: auto;
+		white-space: nowrap;
+		height: auto;
+	}
+
+	.hystori-year-list__item {
+		text-align: center;
+		background: $primaryPink;
+		transition: 0.15s ease-in;
+		padding: 5px 0;
+		width: 100%;
+
+		@media only screen and (max-width: 768px) {
+			display: inline-block;
+			width: 100px;
+			padding: 20px 0;
+		}
+
+		&.active {
+			text-decoration: underline;
+			background: $tertiaryPink;
+			color: $white;
+		}
+
+		&:hover, &:focus {
+			background: $secondaryPink;
+			cursor: pointer;
+		}
+	}
+}
