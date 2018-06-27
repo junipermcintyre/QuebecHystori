@@ -2,9 +2,10 @@
 	width: 100%;
 	position: relative;
 	min-height: 100%;
+	padding: 20px;
 
 	&__calendar {
-		margin: 20px;
+		
 	}
 
 	&__codex {
@@ -14,7 +15,7 @@
 		left: 0;
 		right: 0;
 		transition: 0.3s all ease-in-out;
-		
+
 		&--open {
 			bottom: 0;
 		}

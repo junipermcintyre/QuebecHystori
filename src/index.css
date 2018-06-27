@@ -39,14 +39,14 @@ body {
   font: 14px "Century Gothic", Futura, sans-serif; }
 
 #root {
-  width: 100%; }
+  width: 100%;
+  min-height: 100%; }
 
 .hystori {
   width: 100%;
   position: relative;
-  min-height: 100%; }
-  .hystori__calendar {
-    margin: 20px; }
+  min-height: 100%;
+  padding: 20px; }
   .hystori__codex {
     position: fixed;
     height: 350px;
