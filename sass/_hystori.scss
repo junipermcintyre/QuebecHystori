@@ -2,34 +2,21 @@
 	width: 100%;
 	position: relative;
 	min-height: 100%;
-	padding-left: 125px;
 
-	@media only screen and (max-width: 768px) {
-		padding-left: 0;
-		padding-top: 96px;
+	&__calendar {
+		margin: 20px;
 	}
 
-	&__sidebar {
+	&__codex {
 		position: fixed;
+		height: 350px;
+		bottom: -352px;
 		left: 0;
-		top: 0;
-		width: 125px;
-		height: 100vh;
-
-		@media only screen and (max-width: 768px) {
-			width: 100%;
-			right: 0;
-			height: auto;
+		right: 0;
+		transition: 0.3s all ease-in-out;
+		
+		&--open {
+			bottom: 0;
 		}
 	}
-
-	&__body {
-		position: relative;
-		width: 100%;
-	}
-}
-
-.hystori-body {
-	padding: 20px;
-	background: #def3f1;
 }

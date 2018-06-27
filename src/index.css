@@ -44,30 +44,18 @@ body {
 .hystori {
   width: 100%;
   position: relative;
-  min-height: 100%;
-  padding-left: 125px; }
-  @media only screen and (max-width: 768px) {
-    .hystori {
-      padding-left: 0;
-      padding-top: 96px; } }
-  .hystori__sidebar {
+  min-height: 100%; }
+  .hystori__calendar {
+    margin: 20px; }
+  .hystori__codex {
     position: fixed;
+    height: 350px;
+    bottom: -352px;
     left: 0;
-    top: 0;
-    width: 125px;
-    height: 100vh; }
-    @media only screen and (max-width: 768px) {
-      .hystori__sidebar {
-        width: 100%;
-        right: 0;
-        height: auto; } }
-  .hystori__body {
-    position: relative;
-    width: 100%; }
-
-.hystori-body {
-  padding: 20px;
-  background: #def3f1; }
+    right: 0;
+    transition: 0.3s all ease-in-out; }
+    .hystori__codex--open {
+      bottom: 0; }
 
 .hystori-sidebar__title {
   font-weight: 900;
@@ -113,7 +101,7 @@ body {
   background: #009688; }
 
 .calendar-month {
-  padding: 70px 25px;
+  padding: 20px 25px;
   width: 100%;
   background: #00675b;
   text-align: center; }
@@ -133,6 +121,12 @@ body {
     float: left; }
   .calendar-month__list .next {
     float: right; }
+  .calendar-month__list:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .calendar-month__title {
+    padding-top: 8px; }
 
 .calendar-weekdays {
   padding: 10px;
@@ -183,18 +177,10 @@ body {
   cursor: pointer; }
 
 .hystori-codex {
-  position: fixed;
-  height: 350px;
-  bottom: -352px;
-  left: 0;
-  right: 0;
   background: #ff94c2;
   color: #ba2d65;
   border-top: 2px solid #ba2d65;
   padding: 15px; }
-  .hystori-codex--active {
-    transition: 0.3s all ease-in-out;
-    bottom: 0; }
   .hystori-codex__close {
     position: absolute;
     top: 8px;
@@ -211,26 +197,25 @@ body {
       color: #fff;
       background: #000;
       cursor: pointer; }
-  .hystori-codex__title {
-    font-size: 1.5em;
-    margin: 0 0 15px 0;
-    text-decoration: underline; }
-  .hystori-codex__key {
-    font-style: italic;
-    font-size: 0.8em; }
 
-.codex-description {
-  margin: 15px 0 0 0; }
-  .codex-description p {
-    margin: 4px 0; }
-  .codex-description__link {
-    text-decoration: underline;
-    border-radius: 10px; }
-    .codex-description__link:hover, .codex-description__link:focus {
-      transition: 0.25s ease-out all;
-      color: #fff;
-      background: #000;
-      cursor: pointer;
-      padding: 0 3px; }
+.codex-description__title {
+  font-size: 1.5em;
+  margin: 0 0 15px 0;
+  text-decoration: underline; }
+.codex-description__key {
+  font-style: italic;
+  font-size: 0.8em;
+  margin: 5px 0 10px 0; }
+.codex-description__content {
+  margin: 5px 0; }
+.codex-description__link {
+  text-decoration: underline;
+  border-radius: 10px; }
+  .codex-description__link:hover, .codex-description__link:focus {
+    transition: 0.25s ease-out all;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+    padding: 0 3px; }
 
 /*# sourceMappingURL=index.css.map */

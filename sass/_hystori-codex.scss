@@ -1,20 +1,9 @@
 // Hystori-codex
 .hystori-codex {
-	position: fixed;
-	height: 350px;
-	bottom: -352px;
-	left: 0;
-	right: 0;
 	background: $secondaryPink;
 	color: $tertiaryPink;
 	border-top: 2px solid $tertiaryPink;
 	padding: 15px;
-
-
-	&--active {
-		transition: 0.3s all ease-in-out;
-		bottom: 0;
-	}
 
 	&__close {
 		position: absolute;
@@ -35,6 +24,9 @@
 			cursor: pointer;
 		}
 	}
+}
+
+.codex-description {
 
 	&__title {
 		font-size: 1.5em;
@@ -45,18 +37,11 @@
 	&__key {
 		font-style: italic;
 		font-size: 0.8em;
+		margin: 5px 0 10px 0;
 	}
 
-	&__description {
-		
-	}
-}
-
-.codex-description {
-	margin: 15px 0 0 0;
-
-	p {
-		margin: 4px 0;
+	&__content {
+		margin: 5px 0;
 	}
 
 	&__link {

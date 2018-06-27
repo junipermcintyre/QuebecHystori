@@ -5,7 +5,7 @@
 
 // Hystori calendar
 .calendar-month {
-	padding: 70px 25px;
+	padding: 20px 25px;
 	width: 100%;
 	background: $tertiary;
 	text-align: center;
@@ -34,6 +34,16 @@
 		.next {
 			float: right;
 		}
+
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+
+	&__title {
+		padding-top: 8px;
 	}
 }
 
