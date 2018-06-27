@@ -120,8 +120,9 @@ class Hystori extends React.Component {
 			var myCodex = Object.assign({}, this.state.codex);	// Copy over our states
 			var myCodexStack = JSON.parse(JSON.stringify(this.state.codexStack));
 
-			myCodexStack.push(myCodex);	// Modify them (add the current codex to stack)
-			myCodex = e;				// (set current codex to the found one)
+			if (this.state.codex !== null)	// If it's not null (second or later entity), then put the copy in codexStack
+				myCodexStack.push(myCodex);	// Modify them (add the current codex to stack)
+			myCodex = e;					// (set current codex to the found one)
 
 			this.setState({codex: myCodex, codexStack: myCodexStack});
 		} else {
