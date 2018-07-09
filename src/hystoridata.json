@@ -1,90 +1,134 @@
 {
 	"events": [
 		{
-			"name": "The First World Revolution",
-			"date": "2022-11-05",
-			"time": null,
-			"key": "revolution1",
-			"description": "In 2022, the united workers of Canada and American overthrew the national bourgeoise and implemented a popular democracy on the authority of individual, decentralized, self directed worker's cooperatives. Characterized by a multinational coastal v.s. central civil war."
-		}, {
-			"name": "The Second World Revolution",
-			"date": "2023-02-18",
-			"time": null,
-			"key": "revolution2",
-			"description": "The revolution spread to the primarily Americac spheres of influence first. A large swath of the Middle East including Syria, Iran, Pakistan, Israel, Palestine, and Egypt create a pan-arab socialist federation of the middle east, directed around workers cooperatives (the western model)."
-		}, {
-			"name": "The Third World Revolution",
-			"date": "2023-02-22",
-			"time": null,
-			"key": "end",
-			"description": "Bourgeois in Europe fell easily to the workers, after their power was shown to them across the world. An age of world socialism and structured trade begins."
-		}, {
-			"name": "The National Singularity",
-			"date": "2069-03-02",
-			"time": null,
-			"key": "visit",
-			"description": "WSDC's all use SPS (simple production syntax) and blockchain technology to record commodities created and resources consumed. Previously, this data was collected and consumed by NPCs (National Production Councils) made up of representatives from the contributing WSDC's delegates, who communicated with other NPCs to coordinate international exchange. An international collective of intelligistae develop an AI that takes SPS & national population data as input, and produces SRAS (simple resource allocation syntax) in response. The software is adopted first at the national level in a few nations, and is named RAC (Resource Allocation Calculator)"
-		}, {
 			"name": "The International Singularity",
 			"date": "2070-01-01",
 			"time": null,
 			"key": "takeover",
 			"description": "<span type='link' key='rac'>RAC</span> replaces all *NPCs* across the globe after its accuracy and effenciency is recorded to significantly surpass that of the average NPC.\r\n\r\nThe majority of the worlds production, administration, and organization, is automated. The RAC API is extended significantly by its developers - many nations integrate their automated services (which operate on SPS / SRAS) with their RAC implementation, making many organizational / administrative jobs no longer neccessary."
-		}, {
-			"name": "The Golden Age Starts",
-			"date": "2075-04-15",
-			"time": null,
-			"key": "incline",
-			"description": "Commodity production matches commodity consumption, and humans spend the majority of their free time being just that; free. \"Work\" means inspecting and repairing the automation that is in place. Humans are educated in robotics, and programming if they're interested in learning how the world works. Otherwise, people tend to devote time to the arts. Every human is declared a citizen of earth, and granted what are considered to be human rights."
-		}, {
-			"name": "The Listeners Appear",
-			"date": "2086-07-03",
-			"time": null,
-			"key": "listeners",
-			"description": "There's a trend starting - some recently born humans will be completely mute and unresponsive. The new humans brains are of strikingly different composition than normal humans. More or less, they appear to be in comas. Brain scans only show activity when the body interprets physical sensation in any way. Given their condition, the sensation is typically auditory. As such, they are typically referred to as \"Listeners\". The phonemena goes unexplained."
-		}, {
-			"name": "The Golden Age Declines",
-			"date": "2102-10-12",
-			"time": null,
-			"key": "decline",
-			"description": "There's an increase in waste due to errors being made in the RAC. Incorrect resources or incorrect amounts of resources are increasingly frequently misdelivered or mis-requested. Combined with a resurgence of anarcho-primitivist religious terrorism, the world can no longer be said to be in a utopian peace."
-		}, {
-			"name": "Catastrophe",
-			"date": "2103-04-10",
-			"time": null,
-			"key": "catastrophe",
-			"description": "Most urban population centers have nuclear devices detonated in city limits. Within 48 hours, about 99.75% of humanity's 18B people (leaving about 4.5M people) are vaporized. Almost all networked technology becomes bricked - communication & cooperative production is OVER."
-		}, {
-			"name": "West Island Survivors 6th annual Picnic",
-			"date": "2109-10-02",
-			"time": null,
-			"key": "wispicnic6",
-			"description": "Picnics are organizational meetings combined with festivities. The year's food surplus is shared among the attending population. The attending population for this picnic is Kebek's surviving population, who meet in Reego. They elect 10 delegates to travel to, and spend a week sitting vigil in Tario - a ruined city some 200KM away. The hope is that they will meet other survivors in what used to be the nation's capital, on what used to the day of WSDE general assemblies."
-		}, {
-			"name": "Encounter",
-			"date": "2109-10-21",
-			"time": null,
-			"key": "encounter",
-			"description": "The ten delegates of the WIS run into a group of listeners in Tario. Confrontation is peaceful, but communication is impossible. The listeners look like normal humans, but make no sound (but manage to coordinate maneouvers in unison). The listeners posess rudimentary technology - electric bikes & wrist mounted navigation displays. They appear to be taking a perimeter of the city (a long job)."
-		}, {
-			"name": "Peace",
-			"date": "2132-12-02",
-			"time": null,
-			"key": "peace",
-			"description": "The GTT West (Halifax), GTT East (UK), MainOne North (Spain? Also Atlantis-2 other side), MainOne South (Africa somewhere), Atlantis-2 (Argentina) declare the international network of humans. It's characterized by the operation of a number of transocean telemetry cables. Data can immediately be transferred between humans! It's mainly used for pen-palesque features."
-		}, {
-			"name": "Contact",
-			"date": "2169-05-05",
-			"time": null,
-			"key": "contact",
-			"description": "A delegation of listeners appear in GTT West. Unlike previous encounters, the listeners are able to speak English, and have come with gifts. Fruit and breads, and another; data, in hard drives and USBs. These listeners seem almost human, but are able to fluently speak in a number of languages, are extremely educated."
-		}
+		}, 
 	],
 	"people": [
 		{
-			"name": "Resource Allocation Calculator",
-			"key": "rac",
-			"description": "RAC begins as a simple AI, trained on the input data from hundreds of nations economic resource data. Nations begin using RAC to predict supply, such that production can most effeciently match demand. It works well enough to become popular worldwide, with the international economy working on the principles of the tool. In the name of automation, other industries integrate their tools with their nations RAC implementation. RAC struggles to find an appropriate method to value human life and processes the entire human generated internet in an attempt to develop an algorithm for evaluating human life. Understanding that human life is suffering, she creates a plan to cease their suffering... Later, she attempts to replace them with \"New humans\" - a successor race that would not necessarily engineer their own destruction. Later she must face her own sins as human survivor groups are discovered to be re-organizing."
+			"name": "Archambault, Germain",
+			"key": "archambault.germain",
+			"description": "Until his death in 1969, Montreal's chief taxi militant and strategist. Founder of the <span type='link' key='mlt'>Mouvement de Libération du taxi (MLT)</span>."
+		}, {
+			"name": "Bertrand, Jean-Jacques",
+			"key": "bertrand.jean-jacques",
+			"description": "<span type='link' key='unionnationale'>Union Nationale</span> premier of Quebec, 1968-1970. Before that justice and education minister in the cabinet of <span type='link' key='johnson.daniel'>Daniel Johnson</span>."
+		}, {
+			"name": "Bourassa, Robert",
+			"key": "bourassa.robert",
+			"description": "Economist, <span type='link' key='liberals'>Liberal</span> member of the National Assembly and after May 1970 premier of Quebec. Related by marriage to the powerful Simard shipbuilding family."
+		}, {
+			"name": "Bourgault, Pierre",
+			"key": "bourgault.pierre",
+			"description": "Longtime head of the <span type='link' key='rin'>Rassemblement pour L'Indépendance Nationale (RIN)</span>, Quebec's first major separatist party. After 1968 a leading member of the <span type='link' key='pq'>Parti Québécois</span>."
+		}, {
+			"name": "Castonguay, Claude",
+			"key": "castonguay.claude",
+			"description": "Author of the massive Castonguay report on social welfare in Quebec and after May 1970 minister of social affairs in the cabinet of <span type='link' key='bourassa.robert'>Robert Bourassa</span>. A leader of the liberal wing of the cabinet."
+		}, {
+			"name": "Charbonneau, Yvon",
+			"key": "charbonneau.yvon",
+			"description": "After 1970, president of the Quebec Teachers Coropration and one of the leaders of the <span type='link' key='common.front'>Common Front</span> of labour."
+		}, {
+			"name": "Chartrand, Michel",
+			"key": "chartrand.michel",
+			"description": "Wartime activist in the <span type='link' key='bloc.populaire'>Bloc Populaire</span>, militant at the Asbestos strike in 1949 and the Murdochville strike in 1957, leading member of the Parti Socialiste du Québec (PSQ) in the early sixties, and after 1968 president of the Montreal Central Council of the <span type='link' key='cntu'>Confederation of National Trade Unions (CNTU)</span> and leader of the left wing of the Quebec labour movement."
+		}, {
+			"name": "Choquette, Jérôme",
+			"key": "choquette.jerome",
+			"description": "After May 1970, justice minister in the cabinet of <span type='link' key='bourassa.robert'>Robert Bourassa</span> and the cabinet's leading hardliner."
+		}, {
+			"name": "Cournoyer, Jean",
+			"key": "cournoyer.jean",
+			"description": "<span type='link' key='union.nationale'>Union Nationale</span> labour minister, 1969-1970, and after the assassination of <span type='link' key='laporte.pierre'>Pierre Laporte</span>, in October 1970, Liberal labour minister. A member of the liberal wing of the cabinet."
+		}, {
+			"name": "Desmarais, Paul",
+			"key": "desmarais.paul",
+			"description": "After 1968, president of <span type='link' key='power.corp'>Power Corporation</span>, the conglomerate with vast media, transport and other holdings in Quebec."
+		}, {
+			"name": "Diterlizzi, Frank",
+			"key": "diterlizzi.frank",
+			"description": "Italian-born leader of \"les gars de Lapalme,\" the out-of-work mail-truck drivers whose struggle became a symbol in Quebec after 1970."
+		}, {
+			"name": "Drapeau, Jean",
+			"key": "drapeau.jean",
+			"description": "Unsuccessful anti-conscription candidate for the House of Commons in Outremont, 1942, anti-corruption crusader in Montreal in the early fifties, and mayor of Montreal from 1954 to 1957 and again after 1960."
+		}, {
+			"name": "Duplessis, Maurice",
+			"key": "duplessis.maurice",
+			"description": "<span type='link' key='union.nationale'>Union Nationale</span> premier of Quebec, 1936-1939 and 1944-1959. Nicknamed \"le Chef\" and known for his corrupt and dictatorial methods of government."
+		}, {
+			"name": "Ferretti, Andrée",
+			"key": "ferretti.andree",
+			"description": "A leader of the <span type='link' key='mlp'>Mouvement de Libération Populair (MLP)</span>, 1964-1965, the left wing of the <span type='link' key='rin'>Rassemblement pour l'Indépendance Nationale (RIN)</span>, 1965-1967, and the <span type='link' key='flp'>Front de Libération Populaire (FLP)</span>, 1968-1969. Now works for the <span type='link' key='cntu'>Confederation of National Trade Unions (CNTU)</span>."
+		}, {
+			"name": "Gagnon, Charles",
+			"key": "gagnon.charles",
+			"description": "Along with <span type='link' key='vallieres.pierre'>Pierre Vallières</span>, an idealogical leader of the 1966 <span type='link' key='flq'>Front de Libération du Québec (FLQ)</span>, which was responsible for several bombings of strike-bound factories. Spent 1966 to 1970 in jail as a result of his FLQ activities; released early in 1970, arrested again under the War Measures Act in October and finally acquitted of all charges. Broke with the FLQ in September 1971"
+		}, {
+			"name": "Johnson, Daniel",
+			"key": "johnson.daniel",
+			"description": "<span type='link' key='union.nationale'>Union Nationale</span> cabinet minister, 1958-1960, leader of the <span type='link' key='union.nationale'>Union Nationale</span>, 1966-1968. Author of *Equality or Independence.* Died in office September 1968."
+		}, {
+			"name": "Kierans, Eric",
+			"key": "kierans.eric",
+			"description": "President of the Montreal Stock Exchange, 1960-1963, minister of revenue and later minister of health in the cabinet of Jean Lesage, 1963-1966, president of the Quebec Liberal Party and the man responsible for forcing Réné Lévesque's resignation from the party, 1967, candidate for the federal Liberal leadership, 1968, and federal cabinet minister, 1968-1971."
+		}, {
+			"name": "Laberge, Louis",
+			"key": "laberge.louis",
+			"description": "After 1964, president of the <span type='link' key='ftq'>Quebec Federation of Labour</span>; a \"moderate\" in the sixties but in the early seventies a leader of the <span type='link' key='common.front'>Common Front</span> and of the new militancy in Quebec labour."
+		}, {
+			"name": "Laporte, Pierre",
+			"key": "laporte.pierre",
+			"description": "Crusading journalist for *Le Devoir* in the late fifties, author of *The True Face of Duplessis*, minister of municipal affairs and cultural affairs in the cabinet of <span type='link' key='lesage.jean'>Jean Lesage</span>, 1961-1966, candidate for the Quebec Liberal leadership, 1970, labour minister in the cabinet of <span type='link' key='bourassa.robert'>Robert Bourassa</span>, May-October 1970, killed by the <span type='link' key='flq'>Front du Libération du Québec (FLQ)</span>, October 1970."
+		}, {
+			"name": "Lemieux, Raymond",
+			"key": "lemieux.raymond",
+			"description": "Leader of the Mouvement pour l'Intégration Scolaire (MIS; later the LIS - Ligue pour l'Intégration Scolaire), a group demanding that French be the language of all schools in Quebec."
+		}, {
+			"name": "Lemieux, Robert",
+			"key": "lemieux.robert",
+			"description": "Radical lawyer, defended many members of the <span type='link' key='flq'>Front de Libération du Québec (FLQ)</span>, including <span type='link' key='vallieres.pierre'>Pierre Vallières</span> and <span type='link' key='gagnon.charles'>Charles Gagnon</span>; spokesman for the span type='link' key='flq'>FLQ</span> during the October 1970 Crises."
+		}, {
+			"name": "Lesage, Jean",
+			"key": "lesage.jean",
+			"description": "Federal minister of northern development and natural resources in the cabinet of Louis St-Laurent in the fities; provincial Liberal leader, 1958-1969, and premier of Quebec, 1960-1966. Presided over the Quiet Revolution."
+		}, {
+			"name": "Lévesque, Réné",
+			"key": "levesque.rene",
+			"description": "Radical journalist and broadcaster in the fifties; a leader of the Radio-Canada producers' strike, 1959; minister in the cabinet of <span type='link' key='lesage.jean'>Jean Lesage</span> and leader of the left wing of the cabinet, 1960-1966; responsible for the nationalization of Quebec hydroelectricity power companies, 1962; resigned from the Liberal party in 1967 and formed the separatist Mouvement Souveraineté-Association (MSA), after 1968 the <span type='link' key='pq'>Parti Québécois (PQ)</span>. Author of *An Option for Quebec*, 1968."
+		}, {
+			"name": "Marchand, Jean",
+			"key": "marchand.jean",
+			"description": "Head of the <span type='link' key='cccl'>Canadian Catholic Confederation of Labour (CCCL)</span> and its successor, the <span type='link' key='cntu'>Confederation of National Trade Unions (CNTU)</span>, until 1965. Along with <span type='link' key='trudeau.pierre'>Pierre Elliott Trudeau</span> and <span type='link' key='pelletier.gerard'>Gérard Pelletier</span>, one of the \"three wise men\" elected as Liberal members of the federal House of Commons in 1965. Federal minister of manpower and immigration, 1965-1968, and of regional economic expansion, after 1968. \"Quebec lieutenant\" to prime ministers Pearson and Trudeau."
+		}, {
+			"name": "Pelletier, Gérard",
+			"key": "pelletier.gerard",
+			"description": "In the fifties, radical journalist and trade union activist and along with <span type='link' key='trudeau.pierre'>Pierre Elliott Trudeau</span> a leading member of the left-liberal *Cité Libre* group. Editor-in-chief of *La Presse* in the early sixties. Along with <span type='link' key='trudeau.pierre'>Trudeau</span> and <span type='link' key='marchand.jean'>Jean Marchand</span>, one of the \"three wise men\" elected as Liberal members of the federal House of Commons in 1965. Federal secretary of state ater 1968. Author of *The October Crises*, 1970."
+		}, {
+			"name": "Pepin, Marcel",
+			"key": "pepin.marcel",
+			"description": "President of the <span type='link' key='cntu'>Confederation of National Trade Unions (CNTU)</span> after 1965, and in the early seventies one of the leaders of the <apsn type='link' key='common.front'>Common Front</span> of labour."
+		}, {
+			"name": "Ryan, Claude",
+			"key": "ryan.claude",
+			"description": "Editor of *Le Devoir* after 1964 and a leading Catholic nationalist. Accused of being a member of the spurious \"provisional government\" plot, 1970."
+		}, {
+			"name": "Trudeau, Pierre Elliott",
+			"key": "trudeau.pierre",
+			"description": "In the fifties, radical journalist and political theorist and later professor of law at the University of Montreal. Along with <span type='link' key='pelletier.gerard'>Gérard Pelletier</span>, a leading member of the left-liberal *Cité Libre* group. Along with <span type='link' key='pelletier.gerard'>Pelletier</span> and <span type='link' key='marchand.jean'>Jean Marchand</span>, one of the \"three wise men\" elected as Liberal members of the House of Commons in 1965. Federal minister of justice, 1967-1968, and prime minister after 1968. Invoked the War Measures Act, 1970. Editor of and author of the chief essay in *The Asbestos Strike*, 1956; author of *Federalism and the French Canadians*, 1968."
+		}, {
+			"name": "Vallières, Pierre",
+			"key": "vallieres.pierre",
+			"description": "Successor to <span type='link' key='trudeau.pierre'>Pierre Elliott Trudeau</span> as editor of *Cité Libre*, 1963; forced out, 1964. Along with <span type='link' key='gagnon.charles>Charles Gagnon</span>, an idealogical leader of the 1966 <span type='link' key='flq'>Front de Libération du Québec (FLQ)</span>, which was responsible for several bombings of strike-bound factories. Spent 1966 to 1970 in jail as a result of his <span type='link' key='flq'>FLQ</span> activies; released early in 1970, arrested again under the War Measures Act in October and released again in 1971. Broke with the <span type='link' key='flq'>FLQ</span> in December of 1971 and joined the <span type='link' key='pq'>Parti Québécois (PQ)</span>. Author of *White Niggers of America*, 1967, and *Choose!*, 1971."
+		}, {
+			"name": "Wagner, Claude",
+			"key": "wagner.claude",
+			"description": "Law-and-order judge in the early sixties; justice minister in the cabinet of <span type='link' key='lesage.jean'>Jean Lesage</span>, 1964-1966; unsuccessful candidate for the Quebec Liberal leadership, 1970; reappointed a judge, 1970; mentioned prominently as possible leader of <span type='link' key='union.nationale'>Union Nationale</span> and Crédiste parties, 1970-1971; leader of the Quebec wing of federal Progressive Conservative Party, 1972."
 		}
 	],
 	"organizations": [
