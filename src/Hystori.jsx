@@ -51,6 +51,7 @@ class Hystori extends React.Component {
 		this.openEntity = this.openEntity.bind(this);	// Bind some of the functions, to share them with component children statically
 		this.getEntity = this.getEntity.bind(this);
 		this.closeCodex = this.closeCodex.bind(this);
+		this.setCodexStack = this.setCodexStack.bind(this)
 		this.advanceCal = this.advanceCal.bind(this);
 		this.reverseCal = this.reverseCal.bind(this);
 	}
@@ -61,6 +62,12 @@ class Hystori extends React.Component {
 		var calDates = this.buildCalendarDateObjects(this.calMonths[this.state.calPos]);
 		return (
 			<div className="hystori">
+				<div className="row">
+					<div className="col-12 page-title-container">
+						<h1 className="page-title">Quebec Labour History, 1968 - 1972</h1>
+						<p className="page-subtitle">Presented with support from the <a href="http://marxiste.qc.ca/" target="_blank" rel="noopener noreferrer">International Marxist Tendency</a></p>
+					</div>
+				</div>
 				<Calendar 
 					month={this.calMonths[this.state.calPos]}
 					dates={ calDates } 
@@ -73,6 +80,7 @@ class Hystori extends React.Component {
 					codexStack={this.state.codexStack}
 					openCodex={this.openEntity}
 					closeCodex={this.closeCodex}
+					setCodexStack={this.setCodexStack}
 					getEntity={this.getEntity}
 				/>
 			</div>
@@ -119,11 +127,9 @@ class Hystori extends React.Component {
 		if (e !== null) {
 			var myCodex = Object.assign({}, this.state.codex);	// Copy over our states
 			var myCodexStack = JSON.parse(JSON.stringify(this.state.codexStack));
-
 			if (this.state.codex !== null)	// If it's not null (second or later entity), then put the copy in codexStack
 				myCodexStack.push(myCodex);	// Modify them (add the current codex to stack)
 			myCodex = e;					// (set current codex to the found one)
-
 			this.setState({codex: myCodex, codexStack: myCodexStack});
 		} else {
 			console.error("Could not open entity with key " + key);
@@ -133,12 +139,13 @@ class Hystori extends React.Component {
 	/* Set position in codex stack function */
 	// Move codex stack so that top = array index of n (multiple pops)
 	setCodexStack(n) {
-		if (n < this.state.codexStack.length)	// Throw an error if nothing is going to happen
-			console.error("Attempting to set codex stack to " + n + " when length is " + this.state.codexStack.length);
-		var myCodexStack = Object.assign({}, this.state.codexStack);
-		while (myCodexStack.length > n + 1)			// Pop off the unneeded ones
-			myCodexStack.pop();
-		this.setState({codexStack: myCodexStack});	// Re-save
+		if (n >= this.state.codexStack.length)	// Throw an error if nothing is going to happen
+			console.error("Attempting to set codex stack to index " + n + " when total length is " + this.state.codexStack.length);
+		var myCodexStack = JSON.parse(JSON.stringify(this.state.codexStack));
+		var myEntity;
+		while (myCodexStack.length > n)			// Pop off the unneeded ones. Last is the selected entity
+			myEntity = myCodexStack.pop();
+		this.setState({codex: myEntity, codexStack: myCodexStack});	// Re-save
 	}
 
 	/* Close the codex function */

@@ -1,10 +1,15 @@
 $white: #fff;
 $black: #000;
 
-$primary: #009688;
+$primary: #001b8c;
 $secondary: #52c7b8;
-$tertiary: #00675b;
+$tertiary: #001b8c;
 
-$primaryPink: #f06292;
-$secondaryPink: #ff94c2;
-$tertiaryPink: #ba2d65;
+$squareHover: $white;
+$squareHoverText: $black;
+$textHover: $primary;
+
+$codexBorder: $black;
+$codexBG: $white;
+$codexText: $black;
+$codexHighlight: $primary;

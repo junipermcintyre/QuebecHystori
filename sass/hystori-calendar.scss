@@ -3,6 +3,29 @@
 	background: $primary;
 }
 
+// Title
+.page-title-container {
+	margin: 10px 0 25px 5px;
+}
+
+.page-title {
+	font-size: 2em;
+}
+
+.page-subtitle {
+	font-style: italic;
+	a {
+		color: #ed1110;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+
+
 // Hystori calendar
 .calendar-month {
 	padding: 20px 25px;
@@ -18,12 +41,19 @@
 			align-items: center;
 			justify-content: center;
 			border-radius: 25px;
+			opacity: 1;
+			background: $white;
+			color: $primary;
+			box-shadow: 2px 2px 9px -3px $black;
+			transition: 0.3s width ease-out;
 
 			&:hover, &:focus {
 				cursor: pointer;
-				transition: 0.25s all ease-in;
-				color: $white;
-				background: $black;
+				width: 40px;
+			}
+
+			&:active {
+				opacity: 0.5;
 			}
 		}
 
@@ -45,6 +75,13 @@
 	&__title {
 		padding-top: 8px;
 	}
+
+	&__logo {
+		position: relative;
+	    max-height: 25px;
+	    right: 15px;
+	    top: 6px;
+	}
 }
 
 .calendar-weekdays {
@@ -60,7 +97,7 @@
 
 .calendar-dates {
 	font-size: 0;
-	padding: 10px;
+	padding: 23px 2px 2px 0;
 	&__box {
 		display: inline-block;
 		width: 14.285%;
@@ -87,8 +124,8 @@
 
 	&:hover, &:focus {
 		transition: 0.25s all ease-out;
-		background: #000;
-		color: #fff;
+		background: $squareHover;
+		color: $textHover;
 		opacity: 1;
 	}
 
@@ -100,20 +137,24 @@
 
 	&__events {
 		font-size: 10px;
-		text-align: left;
-		text-decoration: underline;
+		text-decoration: none;
 		position: absolute;
 		left: 5px;
 		top: 22px;
+		width: calc(100% - 10px);
 	}
 }
 
 .calendar-events {
 	&__item {
 		&:hover, &:focus {
-			background: $white;
-			color: $black;
+			color: $primary;
 			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		&:active {
+			opacity: 0.5;
 		}
 	}
 }

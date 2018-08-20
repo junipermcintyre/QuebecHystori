@@ -36,7 +36,9 @@ table {
   border-spacing: 0; }
 
 body {
-  font: 14px "Century Gothic", Futura, sans-serif; }
+  font: 14px "Century Gothic", Futura, sans-serif;
+  color: #fff;
+  background: url(/bg.jpg) repeat; }
 
 #root {
   width: 100%;
@@ -47,6 +49,8 @@ body {
   position: relative;
   min-height: 100%;
   padding: 20px; }
+  .hystori__calendar {
+    border: 1px solid #fff; }
   .hystori__codex {
     position: fixed;
     height: 350px;
@@ -60,13 +64,13 @@ body {
 .hystori-sidebar__title {
   font-weight: 900;
   text-align: center;
-  border-bottom: 2px solid #ba2d65;
+  border-bottom: 2px solid #000;
   padding: 10px 0;
   background: #fff;
   color: #000; }
 
 .hystori-year-list {
-  background: #f06292;
+  background: #fff;
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -79,7 +83,7 @@ body {
       height: auto; } }
   .hystori-year-list .hystori-year-list__item {
     text-align: center;
-    background: #f06292;
+    background: #fff;
     transition: 0.15s ease-in;
     padding: 5px 0;
     width: 100%; }
@@ -90,20 +94,34 @@ body {
         padding: 20px 0; } }
     .hystori-year-list .hystori-year-list__item.active {
       text-decoration: underline;
-      background: #ba2d65;
+      background: #fff;
       color: #fff; }
     .hystori-year-list .hystori-year-list__item:hover, .hystori-year-list .hystori-year-list__item:focus {
-      background: #ff94c2;
+      background: #fff;
       cursor: pointer; }
 
 .hystori-calendar {
   box-shadow: 0 1px 5px -2px #777;
-  background: #009688; }
+  background: #001b8c; }
+
+.page-title-container {
+  margin: 10px 0 25px 5px; }
+
+.page-title {
+  font-size: 2em; }
+
+.page-subtitle {
+  font-style: italic; }
+  .page-subtitle a {
+    color: #ed1110;
+    text-decoration: none; }
+  .page-subtitle a:hover {
+    text-decoration: underline; }
 
 .calendar-month {
   padding: 20px 25px;
   width: 100%;
-  background: #00675b;
+  background: #001b8c;
   text-align: center; }
   .calendar-month__list .prev, .calendar-month__list .next {
     display: flex;
@@ -111,12 +129,17 @@ body {
     width: 30px;
     align-items: center;
     justify-content: center;
-    border-radius: 25px; }
+    border-radius: 25px;
+    opacity: 1;
+    background: #fff;
+    color: #001b8c;
+    box-shadow: 2px 2px 9px -3px #000;
+    transition: 0.3s width ease-out; }
     .calendar-month__list .prev:hover, .calendar-month__list .prev:focus, .calendar-month__list .next:hover, .calendar-month__list .next:focus {
       cursor: pointer;
-      transition: 0.25s all ease-in;
-      color: #fff;
-      background: #000; }
+      width: 40px; }
+    .calendar-month__list .prev:active, .calendar-month__list .next:active {
+      opacity: 0.5; }
   .calendar-month__list .prev {
     float: left; }
   .calendar-month__list .next {
@@ -127,6 +150,11 @@ body {
     clear: both; }
   .calendar-month__title {
     padding-top: 8px; }
+  .calendar-month__logo {
+    position: relative;
+    max-height: 25px;
+    right: 15px;
+    top: 6px; }
 
 .calendar-weekdays {
   padding: 10px;
@@ -139,7 +167,7 @@ body {
 
 .calendar-dates {
   font-size: 0;
-  padding: 10px; }
+  padding: 23px 2px 2px 0; }
   .calendar-dates__box {
     display: inline-block;
     width: 14.285%; }
@@ -156,8 +184,8 @@ body {
     opacity: 0.8; }
   .calendar-box:hover, .calendar-box:focus {
     transition: 0.25s all ease-out;
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #001b8c;
     opacity: 1; }
   .calendar-box__day {
     position: absolute;
@@ -165,21 +193,23 @@ body {
     left: 5px; }
   .calendar-box__events {
     font-size: 10px;
-    text-align: left;
-    text-decoration: underline;
+    text-decoration: none;
     position: absolute;
     left: 5px;
-    top: 22px; }
+    top: 22px;
+    width: calc(100% - 10px); }
 
 .calendar-events__item:hover, .calendar-events__item:focus {
-  background: #fff;
-  color: #000;
-  cursor: pointer; }
+  color: #001b8c;
+  cursor: pointer;
+  text-decoration: underline; }
+.calendar-events__item:active {
+  opacity: 0.5; }
 
 .hystori-codex {
-  background: #ff94c2;
-  color: #ba2d65;
-  border-top: 2px solid #ba2d65;
+  background: #fff;
+  color: #000;
+  border-top: 2px solid #000;
   padding: 15px; }
   .hystori-codex__close {
     position: absolute;
@@ -191,31 +221,59 @@ body {
     align-items: center;
     justify-content: center;
     height: 20px;
-    width: 20px; }
+    width: 20px;
+    color: #001b8c; }
     .hystori-codex__close:hover, .hystori-codex__close:focus {
       transition: 0.25s all ease-in;
       color: #fff;
-      background: #000;
+      background: #001b8c;
       cursor: pointer; }
 
 .codex-description__title {
   font-size: 1.5em;
-  margin: 0 0 15px 0;
-  text-decoration: underline; }
+  margin: 0 0 15px 0; }
 .codex-description__key {
   font-style: italic;
   font-size: 0.8em;
   margin: 5px 0 10px 0; }
 .codex-description__content {
   margin: 5px 0; }
+.codex-description__crumb {
+  text-decoration: underline;
+  border-radius: 10px;
+  color: #001b8c;
+  font-weight: 100;
+  display: inline-block;
+  padding: 2px 4px;
+  margin: 0 4px; }
+  .codex-description__crumb:hover, .codex-description__crumb:focus {
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #001b8c;
+    /* All the borders by using the spread properties */
+    text-decoration: none; }
+  .codex-description__crumb:active {
+    opacity: 0.5; }
+.codex-description__selected-crumb {
+  margin: 2px 8px; }
 .codex-description__link {
   text-decoration: underline;
-  border-radius: 10px; }
+  border-radius: 10px;
+  color: #001b8c;
+  font-weight: 700;
+  display: inline-block;
+  padding: 2px 4px; }
   .codex-description__link:hover, .codex-description__link:focus {
-    transition: 0.25s ease-out all;
-    color: #fff;
-    background: #000;
     cursor: pointer;
-    padding: 0 3px; }
+    box-shadow: 0 0 0 2px #001b8c;
+    /* All the borders by using the spread properties */
+    text-decoration: none; }
+  .codex-description__link:active {
+    opacity: 0.5; }
+
+.codex-title__logo {
+  position: relative;
+  max-height: 29px;
+  right: 5px;
+  top: 7px; }
 
 /*# sourceMappingURL=index.css.map */

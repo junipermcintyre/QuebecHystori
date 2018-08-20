@@ -39,7 +39,7 @@ class Calendar extends React.Component {
 					<ul className="calendar-month__list">
 						<li onClick={() => this.props.reverseCalendar()} className="prev">&#10094;</li>
 					    <li onClick={() => this.props.advanceCalendar()} className="next">&#10095;</li>
-					    <li className="calendar-month__title">{this.getMonthName(this.getMonthNum())}, {this.getYearNum()}</li>
+					    <li className="calendar-month__title"><img alt="fleur de lys" src="/fleur.svg" className="calendar-month__logo" />{this.getMonthName(this.getMonthNum())}, {this.getYearNum()}</li>
 					</ul>
 				</div>
 
@@ -84,7 +84,6 @@ class Calendar extends React.Component {
 	/* Get month name function */
 	// Will return the string name of a month, given its 1-12 index
 	getMonthName(num) {
-		console.log("Get name for: " + parseInt(num-1, 10));
 		var monthNames = [
 			"January",
 			"February",
