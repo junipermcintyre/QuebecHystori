@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Concert+One|Courgette|Fredoka+One|Great+Vibes|Pacifico|Prosto+One|Satisfy");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -45,21 +46,35 @@ body {
   min-height: 100%; }
 
 .hystori {
-  width: 100%;
+  width: calc(100% - 6px);
+  margin: 0 3px;
+  max-width: 680px;
   position: relative;
   min-height: 100%;
-  padding: 20px; }
+  padding: 0;
+  left: 50%;
+  transform: translateX(-50%); }
   .hystori__calendar {
     border: 1px solid #fff; }
   .hystori__codex {
     position: fixed;
-    height: 350px;
+    /*height: 350px;
     bottom: -352px;
     left: 0;
-    right: 0;
+    right: 0;*/
+    width: 100%;
+    max-width: 500px;
+    right: -100vw;
+    top: 0;
+    height: 100%;
     transition: 0.3s all ease-in-out; }
     .hystori__codex--open {
-      bottom: 0; }
+      right: 0; }
+
+.hystori-viewport {
+  position: relative; }
+  .hystori-viewport--codex-open {
+    right: 500px; }
 
 .hystori-sidebar__title {
   font-weight: 900;
@@ -125,6 +140,7 @@ body {
   text-align: center; }
   .calendar-month__list .prev, .calendar-month__list .next {
     display: flex;
+    margin-top: 10px;
     height: 30px;
     width: 30px;
     align-items: center;
@@ -149,16 +165,18 @@ body {
     display: table;
     clear: both; }
   .calendar-month__title {
-    padding-top: 8px; }
+    font-family: "Great Vibes", cursive;
+    font-size: 2.5em; }
   .calendar-month__logo {
     position: relative;
-    max-height: 25px;
-    right: 15px;
-    top: 6px; }
+    max-height: 30px;
+    right: 25px;
+    top: 8px; }
 
 .calendar-weekdays {
-  padding: 10px;
-  font-size: 0; }
+  padding: 10px 10px 0 10px;
+  font-size: 0;
+  font-family: "Prosto One", cursive; }
   .calendar-weekdays li {
     font-size: 1rem;
     display: inline-block;
@@ -167,30 +185,37 @@ body {
 
 .calendar-dates {
   font-size: 0;
-  padding: 23px 2px 2px 0; }
+  padding: 8px 2px 2px 0; }
   .calendar-dates__box {
     display: inline-block;
     width: 14.285%; }
 
 .calendar-box {
   position: relative;
-  opacity: 0.5;
+  opacity: 0.7;
   padding-bottom: 13.6%;
+  color: #fff;
   text-align: center;
-  background: #52c7b8;
+  background: #000;
   box-shadow: 2px 0 0 0 #888, 0 2px 0 0 #888, 2px 2px 0 0 #888, 2px 0 0 0 #888 inset, 0 2px 0 0 #888 inset;
   font-size: 1rem; }
   .calendar-box--inMonth {
-    opacity: 0.8; }
-  .calendar-box:hover, .calendar-box:focus {
-    transition: 0.25s all ease-out;
-    background: #fff;
     color: #001b8c;
+    background: #fff;
     opacity: 1; }
+  .calendar-box:hover, .calendar-box:focus {
+    transition: 0.25s all ease-out; }
   .calendar-box__day {
     position: absolute;
     top: 5px;
-    left: 5px; }
+    left: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    width: 10px;
+    font-size: 0.5em; }
   .calendar-box__events {
     font-size: 10px;
     text-decoration: none;
@@ -209,7 +234,7 @@ body {
 .hystori-codex {
   background: #fff;
   color: #000;
-  border-top: 2px solid #000;
+  border-left: 2px solid #000;
   padding: 15px; }
   .hystori-codex__close {
     position: absolute;

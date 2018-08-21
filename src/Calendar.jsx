@@ -39,18 +39,25 @@ class Calendar extends React.Component {
 					<ul className="calendar-month__list">
 						<li onClick={() => this.props.reverseCalendar()} className="prev">&#10094;</li>
 					    <li onClick={() => this.props.advanceCalendar()} className="next">&#10095;</li>
-					    <li className="calendar-month__title"><img alt="fleur de lys" src="/fleur.svg" className="calendar-month__logo" />{this.getMonthName(this.getMonthNum())}, {this.getYearNum()}</li>
+					    <li className={"calendar-month__title " + 
+					    				"calendar-month__title--m" + this.getMonthNum() +
+					    				" calendar-month__title--y" + this.getYearNum() +
+					    				" calendar-month__title--my" + this.getMonthNum() + this.getYearNum()
+					    }>
+					    	<img alt="fleur de lys" src="/fleur.svg" className="calendar-month__logo" />
+					    	{this.getMonthName(this.getMonthNum())}, {this.getYearNum()}
+					    </li>
 					</ul>
 				</div>
 
 				<ul className="hystori-calendar__weekdays calendar-weekdays">
-					<li>Sunday</li>
-					<li>Monday</li>
-					<li>Tuesday</li>
-					<li>Wednesday</li>
-					<li>Thursday</li>
-					<li>Friday</li>
-					<li>Saturday</li>
+					<li>dimanche</li>
+					<li>lundi</li>
+					<li>merdi</li>
+					<li>mercredi</li>
+					<li>jeudi</li>
+					<li>vendredi</li>
+					<li>samedi</li>
 				</ul>
 
 				<ul className="hystori-calendar__dates calendar-dates">
@@ -85,18 +92,17 @@ class Calendar extends React.Component {
 	// Will return the string name of a month, given its 1-12 index
 	getMonthName(num) {
 		var monthNames = [
-			"January",
-			"February",
-			"March",
-			"April",
-			"May",
-			"June",
-			"July",
-			"August",
-			"September",
-			"October",
-			"November",
-			"December"
+			"janvier",
+			"février",
+			"Mars",
+			"avril",
+			"mai",
+			"juin",
+			"juillet",
+			"août",
+			"septembre",
+			"novembre",
+			"décembre"
 		];
 		return (monthNames[parseInt(num-1, 10)]);
 	}

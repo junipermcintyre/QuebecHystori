@@ -60,21 +60,34 @@ class Hystori extends React.Component {
 	// Render will return JSX. It's called on state updates
 	render() {
 		var calDates = this.buildCalendarDateObjects(this.calMonths[this.state.calPos]);
+
+		if (this.state.codex !== null) {
+			var parentClassName = "hystori hystori--codex-open";
+			var viewportClassName = "hystori-viewport hystori-viewport--codex-open";
+		} else {
+			var parentClassName = "hystori";
+			var viewportClassName = "hystori-viewport";
+		} 
+		
 		return (
-			<div className="hystori">
-				<div className="row">
-					<div className="col-12 page-title-container">
-						<h1 className="page-title">Quebec Labour History, 1968 - 1972</h1>
-						<p className="page-subtitle">Presented with support from the <a href="http://marxiste.qc.ca/" target="_blank" rel="noopener noreferrer">International Marxist Tendency</a></p>
+			<div className={viewportClassName}>
+				<div className={parentClassName}>
+					<div className="container-fluid">
+						<div className="row">
+							<div className="col-12 page-title-container">
+								<h1 className="page-title">Quebec Labour History, 1968 - 1972</h1>
+								<p className="page-subtitle">Presented with support from the <a href="http://marxiste.qc.ca/" target="_blank" rel="noopener noreferrer">International Marxist Tendency</a></p>
+							</div>
+						</div>
 					</div>
+					<Calendar 
+						month={this.calMonths[this.state.calPos]}
+						dates={ calDates } 
+						advanceCalendar={this.advanceCal} 
+						reverseCalendar={this.reverseCal} 
+						openCodex={this.openEntity}
+					/>
 				</div>
-				<Calendar 
-					month={this.calMonths[this.state.calPos]}
-					dates={ calDates } 
-					advanceCalendar={this.advanceCal} 
-					reverseCalendar={this.reverseCal} 
-					openCodex={this.openEntity}
-				/>
 				<Codex 
 					entity={this.state.codex}
 					codexStack={this.state.codexStack}

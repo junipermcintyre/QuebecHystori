@@ -1,8 +1,12 @@
 .hystori {
-	width: 100%;
+	width: calc(100% - 6px);
+	margin: 0 3px;
+	max-width: 680px;
 	position: relative;
 	min-height: 100%;
-	padding: 20px;
+	padding: 0;
+	left: 50%;
+    transform: translateX(-50%);
 
 	&__calendar {
 		border: 1px solid $white;
@@ -10,14 +14,27 @@
 
 	&__codex {
 		position: fixed;
-		height: 350px;
+		/*height: 350px;
 		bottom: -352px;
 		left: 0;
-		right: 0;
+		right: 0;*/
+		width: 100%;
+		max-width: 500px;
+		right: -100vw;
+		top: 0;
+		height: 100%;
 		transition: 0.3s all ease-in-out;
 
 		&--open {
-			bottom: 0;
+			//bottom: 0;
+			right: 0;
 		}
+	}
+}
+
+.hystori-viewport {
+	position: relative;
+	&--codex-open {
+		right: 500px;
 	}
 }

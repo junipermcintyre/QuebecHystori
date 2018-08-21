@@ -36,6 +36,7 @@
 	&__list {
 		.prev, .next {
 			display: flex;
+			margin-top: 10px;
 			height: 30px;
 			width: 30px;
 			align-items: center;
@@ -73,20 +74,22 @@
 	}
 
 	&__title {
-		padding-top: 8px;
+		font-family: $fontVibes;
+		font-size: 2.5em;
 	}
 
 	&__logo {
 		position: relative;
-	    max-height: 25px;
-	    right: 15px;
-	    top: 6px;
+	    max-height: 30px;
+	    right: 25px;
+	    top: 8px;
 	}
 }
 
 .calendar-weekdays {
-	padding: 10px;
+	padding: 10px 10px 0 10px;
 	font-size: 0;
+	font-family: $fontProsto;
 	li {
 		font-size: 1rem;
 		display: inline-block;
@@ -97,7 +100,7 @@
 
 .calendar-dates {
 	font-size: 0;
-	padding: 23px 2px 2px 0;
+	padding: 8px 2px 2px 0;
 	&__box {
 		display: inline-block;
 		width: 14.285%;
@@ -106,10 +109,11 @@
 
 .calendar-box {
 	position: relative;
-	opacity: 0.5;
+	opacity: 0.7;
 	padding-bottom: 13.6%;
+	color: $white;
 	text-align: center;
-	background: $secondary;
+	background: $black;
 	box-shadow: 
 	    2px 0 0 0 #888, 
 	    0 2px 0 0 #888, 
@@ -119,20 +123,27 @@
 	font-size: 1rem;
 
 	&--inMonth {
-		opacity: 0.8;
+		color: $primary;
+		background: $white;
+		opacity: 1;
 	}
 
 	&:hover, &:focus {
 		transition: 0.25s all ease-out;
-		background: $squareHover;
-		color: $textHover;
-		opacity: 1;
+
 	}
 
 	&__day {
 		position: absolute;
 		top: 5px;
 		left: 5px;
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 10px;
+		width: 10px;
+		font-size: 0.5em;
 	}
 
 	&__events {
