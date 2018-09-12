@@ -91,6 +91,7 @@ class Calendar extends React.Component {
 	/* Get month name function */
 	// Will return the string name of a month, given its 1-12 index
 	getMonthName(num) {
+		console.log("Looking up: " + num);
 		var monthNames = [
 			"janvier",
 			"février",
@@ -101,6 +102,7 @@ class Calendar extends React.Component {
 			"juillet",
 			"août",
 			"septembre",
+			"octobre",
 			"novembre",
 			"décembre"
 		];

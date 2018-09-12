@@ -74,8 +74,31 @@
 	}
 
 	&__title {
-		font-family: $fontVibes;
 		font-size: 2.5em;
+		font-family: $fontPacifico;
+		&--m01, &--m07 {
+			font-family: $fontConcert;
+		}
+
+		&--m02, &--m08 {
+			font-family: $fontPacifico;
+		}
+
+		&--m03, &--m09 {
+			font-family: $fontSatisfy;
+		}
+
+		&--m04, &--m10 {
+			font-family: $fontCourgette;
+		}
+
+		&--m05, &--m11 {
+			font-family: $fontLobster;
+		}
+
+		&--m06, &--m12 {
+			font-family: $fontVibes;
+		}
 	}
 
 	&__logo {

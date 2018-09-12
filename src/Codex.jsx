@@ -79,9 +79,14 @@ class Codex extends React.Component {
 
 		crumbs.push(<span key={codexStack.length} className="codex-description__selected-crumb">{entity.key}</span>);
 
+		// If the entity has a date, include it
+		var date = "";
+		if (typeof(entity.date) !== "undefined")
+			date = <span className="codex-description__date">{entity.date}</span>;
+
 		return (
 			<React.Fragment>
-				<p className="codex-description__title codex-title"><img alt="fleur de lys" src="/fleur-blue.svg" className="codex-title__logo"/>{entity.name}</p>
+				<p className="codex-description__title codex-title"><img alt="fleur de lys" src="/fleur-blue.svg" className="codex-title__logo"/>{entity.name} {date}</p>
 				<p className="codex-description__key">{crumbs}</p>
 				<div className="codex-description__content">{desc}</div>
 			</React.Fragment>

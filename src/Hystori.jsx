@@ -1,6 +1,7 @@
 import React from 'react';
 import Calendar from './Calendar.jsx';
 import Codex from './Codex.jsx';
+import { getMonthsBetween } from './helpers';
 
 /* REACT COMPONENT DOC BLOCK
 
@@ -38,8 +39,30 @@ class Hystori extends React.Component {
 		var events = this.props.data.events;
 		var months = [];
 		for (var i = 0; i < events.length; i++) {	// Build a list of months for the calendar based on interesting dates
-			if (months.indexOf(events[i].date.substr(0,7)) === -1)	// If it's not already in
-				months.push(events[i].date.substr(0,7));
+
+			/* Event date syntax
+			* *Documentdation? A good a place as any!*
+			*
+			* So basically you expect it in the form
+			*
+			*     YYYY-MM-DD[|YYYY-MM-DD]
+			*
+			* which reads specific date to specific date inclusive. The latter half is optional to not specify a range.
+			* The event is applied to all applicable days with a CSS class of "range", with "range-start" and "range-end" marking the endpoints
+			*/
+			if (events[i].date.length === 10) { // 3A YYYY-MM-DD (year is 0,4 month is 5,2 day is 8,2)
+				if (months.indexOf(events[i].date.substr(0,7)) === -1)	// If it's not already in
+					months.push(events[i].date.substr(0,7));
+			} else if (events[i].date.length === 21) {
+				// Loop each day in between, add to months
+				var range = getMonthsBetween(events[i].date.substr(0,10), events[i].date.substr(11,10));
+				for (var j = 0; j < range.length; j++)
+					months.push(range[j]);
+			} else {
+				console.error("Unrecognized date syntax for event. Use YYYY-MM-DD[|YYYY-MM-DD]. Used is below:");
+				console.log(events[i].date);
+			}
+
 		}
 		this.data = this.props.data;	// Set the properties for Hystori
 		this.calMonths = months;		// these two are more or less constant
@@ -60,13 +83,16 @@ class Hystori extends React.Component {
 	// Render will return JSX. It's called on state updates
 	render() {
 		var calDates = this.buildCalendarDateObjects(this.calMonths[this.state.calPos]);
-
+		console.log("Calendar dates in month:");
+		console.log(calDates);
+		var parentClassName = null;
+		var viewportClassName = null;
 		if (this.state.codex !== null) {
-			var parentClassName = "hystori hystori--codex-open";
-			var viewportClassName = "hystori-viewport hystori-viewport--codex-open";
+			parentClassName = "hystori hystori--codex-open";
+			viewportClassName = "hystori-viewport hystori-viewport--codex-open";
 		} else {
-			var parentClassName = "hystori";
-			var viewportClassName = "hystori-viewport";
+			parentClassName = "hystori";
+			viewportClassName = "hystori-viewport";
 		} 
 		
 		return (
@@ -193,8 +219,31 @@ class Hystori extends React.Component {
 		var myEvents = this.data.events;	// This is like the same function as above, except for the padding
 		var myEventsArray = [];
 		for (var i = 0; i < myEvents.length; i++){
-			if (myEvents[i].date === day)	// Except for this line (no subtr)
-				myEventsArray.push(Object.assign({}, myEvents[i]));
+
+			/* DATE SYNTAX CHECKUP / TODO
+			*
+			* 1. Get the inclusive array of dates for current event
+			* 2. Check and see if the target day in loop is a match against any of the days in the event range
+			* 3. 
+			* 
+			* Way i see it, there's three cases */
+
+			if (myEvents[i].date.length === 10) { 		 // If there's one date
+				if (myEvents[i].date === day)
+					myEventsArray.push(Object.assign({}, myEvents[i]));
+			} else if (myEvents[i].date.length === 21) { // If there's a range of dates
+				var d1 = new Date((myEvents[i].date.substr(0,10)).replace(/-/g, "/")); // Earlier (smaller)
+				var d2 = new Date((myEvents[i].date.substr(11,10)).replace(/-/g, "/")); // Later (bigger)
+				var cd = new Date(day.replace(/-/g, "/"));
+
+				if (cd <= d2 && cd >= d1)
+					myEventsArray.push(Object.assign({}, myEvents[i]));
+			} else {
+				console.error("Unrecognized date syntax for event. Use YYYY-MM-DD[|YYYY-MM-DD]. Used is below:");
+				console.log(myEvents[i].date);
+			}
+
+			
 		}
 		/*if (myEventsArray.length === 0)
 			console.error("No events found on day " + day);*/ // Little angry..

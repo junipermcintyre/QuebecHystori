@@ -1,12 +1,12 @@
 .hystori {
 	width: calc(100% - 6px);
-	margin: 0 3px;
+	margin: 0 3px 10px 3px;
 	max-width: 680px;
-	position: relative;
+	position: absolute;
 	min-height: 100%;
 	padding: 0;
-	left: 50%;
-    transform: translateX(-50%);
+	right: 50%;
+    transform: translateX(50%);
 
 	&__calendar {
 		border: 1px solid $white;
@@ -34,7 +34,9 @@
 
 .hystori-viewport {
 	position: relative;
+	right: 0;
+	transition: 0.3s all ease-in-out;
 	&--codex-open {
-		right: 500px;
+		right: 250px;
 	}
 }
